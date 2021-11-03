@@ -1,0 +1,553 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Header */
+
+#header {
+    width: 100%;
+    height: 750px;
+    background-image: url(./images/header.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.head-container {
+    background-color: #363a5d2f;
+    width: 100%;
+    height: 100%;
+    padding: 0 15%;
+}
+
+.nav {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #474a61;
+}
+
+.nav img {
+    width: 150px;
+}
+
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-burger {
+    width: 50px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rebeccapurple;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rebeccapurple;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-burger::before {
+    transform: translateY(-16px);
+}
+
+.menu-btn-burger::after {
+    transform: translateY(16px);
+}
+
+.menu-btn.open .menu-btn-burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu-btn.open .menu-btn-burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn-burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+#menu-btn {
+    display: none;
+}
+
+.nav .navLinks a {
+    color: rgba(255, 255, 255, 0.616);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 0 10px;
+}
+
+.nav .navLinks a:hover {
+    transition-duration: 400ms;
+    color: rgba(255, 255, 255, 0.952);
+}
+
+.nav .navLinks a:active {
+    transition-duration: 100ms;
+    color: white
+}
+
+.header-content {
+    width: 100%;
+    height: calc(100% - 70px);
+    text-align: center;
+    padding-top: 8vw;
+}
+
+.header-content h1 {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    width: 75%;
+    margin: 0 auto;
+    font-size: 65px;
+    font-weight: 700;
+}
+
+.header-content p {
+    width: 55%;
+    margin: 20px auto;
+    color: rgba(255, 255, 255, 0.829);
+}
+
+.header-content button {
+    background-color: #e84546;
+    border: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 15px 40px;
+    color: #fde7df;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.header-content button:hover {
+    transition-duration: 400ms;
+    background-color: #f56060;
+}
+
+.header-content button:active {
+    transition-duration: 100ms;
+    background-color: #e84546;
+}
+
+/* Features */
+
+#features {
+    width: 100%;
+    padding: 100px 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    grid-gap: 60px 8%;
+}
+
+
+.feature h4 {
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    margin: 20px 0;
+    font-size: 14px;
+}
+
+.feature p {
+    margin-bottom: 1rem;
+    color: rgb(66, 66, 66);
+}
+
+/* WORKS GALLERY */
+
+.works-gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2px;
+    overflow: hidden;
+}
+
+.works-gallery .photo {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.works-gallery .photo:hover::after {
+    opacity: 1;
+}
+
+.works-gallery .photo:hover .photo-text {
+    opacity: 1;
+    top: 0;
+}
+
+
+.works-gallery .photo::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #d33e40d7;
+    transition: .5s;
+    z-index: 1;
+    opacity: 0;
+
+}
+
+
+.works-gallery .photo img {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.works-gallery .photo .photo-text {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 2;
+    transition: .5s;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+}
+
+.works-gallery .photo .photo-text p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.works-gallery .photo .photo-text h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    margin-bottom: 0.5rem;
+}
+
+/* Our Team Section */
+
+.team-container {
+    width: 100%;
+    padding: 100px 10%;
+    height: 100%;
+    margin: 0.5rem 0 5rem 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2px;
+    height: 700px;
+}
+
+.team-container .member {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.team-container .member img {
+    object-fit: cover;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 300ms;
+}
+
+.team-container .member img:hover {
+    transform: scale(0.96);
+    border-radius: 5px;
+}
+
+.team-container .member h4 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.team-container .member h3 {
+    width: 100%;
+    font-size: 12px;
+    margin: 14px 0 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: rgba(255, 70, 70, 0.918);
+}
+
+.team-container .member p {
+    margin: 10px 0px;
+    width: 75%;
+}
+
+.team-container .member .social-media a i {
+    color: #555;
+    background-color: white;
+    border: 1px solid rgb(207, 207, 207);
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+
+.team-container .member .social-media a i:hover {
+    transition-duration: 400ms;
+    background-color: rgb(255, 87, 65);
+    color: rgb(231, 231, 231);
+}
+
+/* Carousel implementation */
+
+#testimonials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+}
+
+.photo-testimonial {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto 10px;
+}
+
+.photo-testimonial span img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s linear;
+    opacity: 0;
+}
+
+.photo-testimonial .active-img img {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1.3s;
+    cursor: pointer;
+    opacity: 1;
+}
+
+
+.photo-testimonial .active-img img:hover {
+    transform: scale(1.1);
+}
+
+.testimonial-text {
+    background-color: #523549;
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding: 7.5rem;
+}
+
+.testimonial-text p {
+    font-size: 36px;
+    font-style: italic;
+    font-family: 'Cardo', serif;
+    margin-bottom: 2.5rem;
+}
+
+.testimonial-text h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+    margin-bottom: 80px;
+}
+
+.carousel-buttons {
+    margin-top: 12rem;
+    width: 80%;
+    height: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out;
+}
+
+.carousel-buttons span {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-color: rgb(150, 149, 149);
+    margin: 0 5px;
+    border-radius: 50%;
+}
+
+.carousel-buttons span:hover {
+    cursor: pointer;
+    transition-duration: 500ms;
+    background-color: white;
+}
+
+.carousel-buttons span.active {
+    background-color: white;
+}
+
+/* Download section */
+
+#download {
+    width: 100%;
+    padding: 130px 3%;
+    text-align: center;
+}
+
+#download h2 {
+    font-weight: lighter;
+    font-size: 28px;
+    color: rgb(97, 97, 97);
+}
+
+#download p {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    color: rgb(44, 44, 44);
+    margin-top: 0.30rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+#download button {
+    padding: 1rem 5rem;
+    border: 0;
+    background-color: #e84546;
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    outline: none;
+    border-radius: 3px;
+}
+
+#download button:hover {
+    transition: 300ms;
+    background-color: rgb(255, 115, 115);
+}
+
+#download button:active {
+    transition: 100ms;
+    background-color: #e84546;
+}
+
+/* Footer section */
+
+.footer {
+    background-color: #3a3e63;
+    color: white;
+}
+
+.text-footer {
+    padding: 115px 15%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+
+.copyright {
+    background-color: #313455;
+    padding: 1.5rem 0;
+    text-align: center;
+    color: #999999;
+}
+
+.social-media-footer a i {
+    color: white;
+    background-color: transparent;
+    border: 2px solid rgb(207, 207, 207);
+    display: inline-block;
+    font-size: 20px;
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.3rem;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.social-media-footer a i:hover {
+    transition-duration: 400ms;
+    background-color: white;
+    color: #313455;
+}
+
+.creator {
+    color: white;
+}
+
+.heart {
+    color: #e54542;
+}
+
+.text-footer h3 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.text-footer p {
+    padding-top: 0.75rem;
+    color: #999999;
+}
+
+.text-share-footer {
+    font-family: 'Open Sans', sans-serif;
+}

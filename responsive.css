@@ -1,0 +1,447 @@
+@media only screen and (max-width: 1024px) {
+    .navLinks {
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    .head-container {
+        padding: 0 5%;
+    }
+
+    .header-content h1 {
+        font-size: 40px;
+        width: 75%;
+    }
+
+    .navLinks {
+        display: inline-block;
+    }
+
+    #features {
+        grid-template-columns: none;
+        padding: 4rem 7rem;
+    }
+
+    .works-gallery {
+        grid-template-columns: none;
+    }
+
+    .team-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .member {
+        text-align: center;
+    }
+
+    .team-container .member p {
+        width: 100%;
+        padding: 0 6rem;
+    }
+
+    #testimonials {
+        grid-template-columns: none;
+        margin-top: 46rem;
+    }
+
+    .photo-testimonial {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .testimonial-text {
+        margin-top: calc(100% - 50%);
+        position: inherit;
+        z-index: 3;
+    }
+
+    .carousel-buttons span {
+        margin: 0 15px;
+    }
+
+    #download h2 {
+        padding: 0 4rem;
+    }
+
+    .footer .text-footer {
+        grid-template-columns: none;
+    }
+
+    .footer .text-footer .text p {
+        padding-top: 0.75rem;
+        padding-bottom: 2rem;
+    }
+
+    .footer .text-share-footer {
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+
+    .head-container {
+        padding: 0 5%;
+    }
+
+    #menu-btn .menu-btn-open {
+        margin-left: 38rem;
+    }
+
+    .header-content h1 {
+        font-size: 40px;
+        width: 75%;
+    }
+
+    #menu-btn {
+        position: relative;
+        z-index: 2;
+        margin-left: 38rem;
+        margin-top: 5rem;
+        display: inline-block;
+    }
+
+    .navLinks {
+        background-color: rgb(75, 32, 230);
+        width: 100%;
+        border-radius: 4px;
+        position: relative;
+        z-index: 3;
+        right: 6rem;
+        margin: 13rem 0 0 0;
+        display: none;
+        text-align: center;
+    }
+
+    #features {
+        grid-template-columns: none;
+        padding: 4rem 7rem;
+    }
+
+    .works-gallery {
+        grid-template-columns: none;
+    }
+
+    .team-container {
+        display: inline;
+    }
+
+    .member {
+        text-align: center;
+    }
+
+    .team-container .member p {
+        width: 100%;
+        padding: 0 15rem;
+    }
+
+    #testimonials {
+        grid-template-columns: none;
+        margin-top: 5rem;
+    }
+
+    .photo-testimonial {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .testimonial-text {
+        margin-top: calc(100% - 20%);
+        position: inherit;
+        z-index: 3;
+    }
+
+    .carousel-buttons span {
+        margin: 0 15px;
+    }
+
+    #download h2 {
+        padding: 0 4rem;
+    }
+
+    .footer .text-footer {
+        grid-template-columns: none;
+    }
+
+    .footer .text-footer .text p {
+        padding-top: 0.75rem;
+        padding-bottom: 2rem;
+    }
+
+    .footer .text-share-footer {
+        margin-top: 2rem;
+    }
+
+}
+
+@media only screen and (max-width: 810px) {
+
+    #menu-btn {
+        position: relative;
+        z-index: 2;
+        margin-left: 32rem;
+        margin-top: 5rem;
+        display: inline-block;
+    }
+
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    #menu-btn {
+        position: relative;
+        z-index: 2;
+        margin-left: 30rem;
+        margin-top: 5rem;
+        display: inline-block;
+    }
+
+    #features {
+        grid-template-columns: none;
+        padding: 4rem 7rem;
+    }
+
+    .works-gallery {
+        grid-template-columns: none;
+    }
+
+    .team-container {
+        display: inline;
+    }
+
+    .member {
+        text-align: center;
+    }
+
+    .team-container .member p {
+        width: 100%;
+        padding: 0 15rem;
+    }
+
+    #testimonials {
+        grid-template-columns: none;
+    }
+
+    .photo-testimonial {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .testimonial-text {
+        margin-top: 100%;
+        position: inherit;
+        z-index: 3;
+    }
+
+    .carousel-buttons span {
+        margin: 0 15px;
+    }
+
+    #download h2 {
+        padding: 0 4rem;
+    }
+
+    .footer .text-footer {
+        grid-template-columns: none;
+    }
+
+    .footer .text-footer .text p {
+        padding-top: 0.75rem;
+        padding-bottom: 2rem;
+    }
+
+    .footer .text-share-footer {
+        margin-top: 2rem;
+    }
+}
+
+
+@media only screen and (max-width: 620px) {
+
+    .head-container {
+        padding: 0 5%;
+    }
+
+    .header-content h1 {
+        font-size: 40px;
+        width: 75%;
+    }
+
+    #menu-btn {
+        position: relative;
+        z-index: 2;
+        margin-left: 20rem;
+        margin-top: 5rem;
+        display: inline-block;
+    }
+
+    .navLinks {
+        background-color: rgb(75, 32, 230);
+        width: 100%;
+        border-radius: 4px;
+        position: relative;
+        z-index: 3;
+        right: 6rem;
+        margin: 13rem 0 0 0;
+        display: none;
+        text-align: center;
+    }
+
+    #features {
+        grid-template-columns: none;
+        padding: 4rem 7rem;
+    }
+
+    .works-gallery {
+        grid-template-columns: none;
+    }
+
+    .team-container {
+        display: inline;
+    }
+
+    .member {
+        text-align: center;
+    }
+
+    .team-container .member p {
+        width: 100%;
+        padding: 0 7rem;
+    }
+
+    #testimonials {
+        grid-template-columns: none;
+    }
+
+    .photo-testimonial {
+        position: absolute;
+        z-index: 2;
+    }
+
+    .testimonial-text {
+        margin-top: calc(100% + 50%);
+        position: inherit;
+        z-index: 3;
+    }
+
+    .carousel-buttons span {
+        width: 5%;
+        margin: 0 15px;
+    }
+
+    #download h2 {
+        padding: 0 4rem;
+    }
+
+    .footer .text-footer {
+        grid-template-columns: none;
+    }
+
+    .footer .text-footer .text p {
+        padding-top: 0.75rem;
+        padding-bottom: 2rem;
+    }
+
+    .footer .text-share-footer {
+        margin-top: 2rem;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 550px) {
+    #menu-btn {
+        position: relative;
+        z-index: 2;
+        margin-left: 17rem;
+        margin-top: 5rem;
+        display: inline-block;
+    }
+
+    .carousel-buttons span {
+        width: 7%;
+    }
+
+    .navLinks {
+        background-color: rgb(75, 32, 230);
+        width: 100%;
+        border-radius: 4px;
+        position: relative;
+        z-index: 3;
+        right: 6rem;
+        margin: 13rem 0 0 0;
+        display: none;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    #menu-btn {
+        position: relative;
+        z-index: 2;
+        margin-left: 12rem;
+        margin-top: 5rem;
+        display: inline-block;
+    }
+
+    .navLinks {
+        background-color: rgb(75, 32, 230);
+        width: 100%;
+        border-radius: 4px;
+        position: relative;
+        z-index: 3;
+        right: 6rem;
+        margin: 13rem 0 0 0;
+        display: none;
+        text-align: center;
+    }
+
+    .carousel-buttons span {
+        width: 7%;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    #menu-btn {
+        position: relative;
+        z-index: 2;
+        margin-left: 8.5rem;
+        margin-top: 5rem;
+        display: inline-block;
+    }
+
+    .navLinks {
+        background-color: rgb(75, 32, 230);
+        width: 100%;
+        border-radius: 4px;
+        position: relative;
+        z-index: 3;
+        right: 6rem;
+        margin: 13rem 0 0 0;
+        display: none;
+        text-align: center;
+    }
+
+    .head-container {
+        padding: 0 5%;
+    }
+
+    .header-content h1 {
+        font-size: 30px;
+        width: 75%;
+    }
+
+    .carousel-buttons {
+        width: 10%;
+    }
+
+
+}
